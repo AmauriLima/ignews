@@ -4,15 +4,17 @@ import { FiX } from 'react-icons/fi';
 
 import { Button } from './styles';
 
-type IButtonProps = {
-  [buttonType: string]: {
-    color: string,
-    label: string,
-  },
-}
+type UserStatus = 'loggedIn' | 'loggedOut';
+type ButtonProps = {
+  // eslint-disable-next-line no-unused-vars
+  [buttonType in UserStatus]: {
+    color: string;
+    label: string;
+  };
+};
 
 export function SignInButton() {
-  const [userStatus] = useState<'loggedIn' | 'loggedOut'>('loggedIn');
+  const [userStatus] = useState<UserStatus>('loggedIn');
 
   const buttonProps = {
     loggedIn: {
@@ -23,7 +25,7 @@ export function SignInButton() {
       color: '#eba417',
       label: 'Sign in with Github',
     },
-  } as IButtonProps;
+  } as ButtonProps;
 
   return (
     <Button type="button">
