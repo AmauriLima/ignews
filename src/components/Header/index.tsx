@@ -1,7 +1,8 @@
+import { SignInButton } from '..';
 import Logo from '../../assets/images/logo.svg';
 import { Container, Content } from './styles';
 
-function Header() {
+export function Header() {
   return (
     <Container>
       <Content>
@@ -10,9 +11,9 @@ function Header() {
           <a className="active">Home</a>
           <a>Posts</a>
         </nav>
+
+        <SignInButton />
       </Content>
     </Container>
   );
 }
-
-export default Header;

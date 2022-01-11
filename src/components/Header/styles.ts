@@ -49,5 +49,10 @@ export const Content = styled.div`
         background: ${({ theme }) => theme.colors.yellow[500]};
       }
     }
+
+  }
+
+  button {
+    margin-left: auto;
   }
 `;
