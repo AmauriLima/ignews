@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Avatar from '../assets/images/avatar.svg';
+import { SubscribeButton } from '../components';
 import { Container, Hero } from '../styles/home';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
             Get acces to all the publication <br />
             <span>for $9.90 month</span>
           </p>
+          <SubscribeButton />
         </Hero>
         <Avatar />
 
